@@ -37,7 +37,7 @@ const SignUp = () => {
 						</label>
 						<input
 							type='text'
-							placeholder='John Doe'
+							placeholder='Максим Хомяков'
 							className='w-full input input-bordered  h-10'
 							value={inputs.fullName}
 							onChange={(e) => setInputs({ ...inputs, fullName: e.target.value })}
@@ -50,7 +50,7 @@ const SignUp = () => {
 						</label>
 						<input
 							type='text'
-							placeholder='johndoe'
+							placeholder='maksimhomyakov'
 							className='w-full input input-bordered h-10'
 							value={inputs.username}
 							onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
@@ -63,7 +63,7 @@ const SignUp = () => {
 						</label>
 						<input
 							type='password'
-							placeholder='Enter Password'
+							placeholder='Введите пароль'
 							className='w-full input input-bordered h-10'
 							value={inputs.password}
 							onChange={(e) => setInputs({ ...inputs, password: e.target.value })}
@@ -76,7 +76,7 @@ const SignUp = () => {
 						</label>
 						<input
 							type='password'
-							placeholder='Confirm Password'
+							placeholder='Подтвердите пароль'
 							className='w-full input input-bordered h-10'
 							value={inputs.confirmPassword}
 							onChange={(e) => setInputs({ ...inputs, confirmPassword: e.target.value })}
@@ -90,7 +90,7 @@ const SignUp = () => {
 						className='text-sm hover:underline hover:text-blue-600 mt-2 inline-block'
 						href='#'
 					>
-						Already have an account?
+						Уже есть аккаунт?
 					</Link>
 
 					<div>

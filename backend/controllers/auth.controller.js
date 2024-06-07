@@ -20,10 +20,9 @@ export const signup = async (req, res) => {
 		const salt = await bcrypt.genSalt(10);
 		const hashedPassword = await bcrypt.hash(password, salt);
 
-		// https://avatar-placeholder.iran.liara.run/
 
-		const boyProfilePic = `https://avatar.iran.liara.run/public/boy?username=${username}`;
-		const girlProfilePic = `https://avatar.iran.liara.run/public/girl?username=${username}`;
+		const boyProfilePic = `https://pixelbox.ru/wp-content/uploads/2021/11/avatar-whatsapp-pixelbox.ru-36.jpg`;
+		const girlProfilePic = `https://klike.net/uploads/posts/2023-02/1675749734_3-39.jpg`;
 
 		const newUser = new User({
 			fullName,
@@ -72,17 +71,17 @@ export const login = async (req, res) => {
 			profilePic: user.profilePic,
 		});
 	} catch (error) {
-		console.log("Error in login controller", error.message);
-		res.status(500).json({ error: "Internal Server Error" });
+		console.log("Ошибка входа в контроллер", error.message);
+		res.status(500).json({ error: "Ошибка на сервере 500" });
 	}
 };
 
 export const logout = (req, res) => {
 	try {
 		res.cookie("jwt", "", { maxAge: 0 });
-		res.status(200).json({ message: "Logged out successfully" });
+		res.status(200).json({ message: "Вышел успешно" });
 	} catch (error) {
-		console.log("Error in logout controller", error.message);
-		res.status(500).json({ error: "Internal Server Error" });
+		console.log("Ошибка в выходе из аккаунта", error.message);
+		res.status(500).json({ error: "Ошибка на сервере 500" });
 	}
 };
