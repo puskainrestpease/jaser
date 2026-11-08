@@ -22,7 +22,13 @@ The Express server exposes authentication, user and message routes under `/api`,
 
 ## Configuration
 
-Create a local `.env` file in the repository root:
+Copy the example configuration to a local `.env` file in the repository root:
+
+```bash
+cp .env.example .env
+```
+
+Edit the values in `.env` for your environment:
 
 ```env
 PORT=5000
